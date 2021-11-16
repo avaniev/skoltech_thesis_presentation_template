@@ -1,4 +1,4 @@
-# SkoltechLaTeXtemplates
-this repository is created to accumulate all LaTeX templates needed at Skoltech
+# Skoltech LaTeX thesis presentation template
+This repository contains files and code for Skoltech LaTeX template of MSc thesis presentation for Data Science students.
 
-all code is published on MIT public license (if nothing mention inside the files)
+All code is published on MIT public license (if nothing mention inside the files)
