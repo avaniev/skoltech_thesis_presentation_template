@@ -1,0 +1,319 @@
+\documentclass[aspectratio=169]{beamer}  
+
+\usepackage{ifxetex}
+\ifxetex
+    \usepackage{fontspec}
+    \usepackage{xunicode}
+    \usepackage{xltxtra}
+    \usepackage{xecyr}
+    \usepackage{polyglossia}
+\else
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+%% USAGE: 
+% \usepackage[logo=sklogo]{beamerskoltech} 
+%   if you have a stand-alone image file for Sk logo 
+% or
+% \usepackage{beamerskoltech}
+%   In case you don't want logo at all 
+%
+% provided commands:
+% color `skoltechgreen` -- the dark-green color for structure elements 
+% command `\logoname` -- the name of logo file if exist 
+% command `{\csk <text>}` -- the shortcut from `\color{skoltechgreen}`
+% command `skfootnote{text}` -- put some text for current slide
+% `\renewcommand{\skbeforetitle}{\vspace{-3ex}}` is useful in case you use `aspectratio=169`. Also for this aspectratio it is useful to make `\setlength{\skfootnotelen}{12cm}`
+%%%%%%%%%%%%%%%%
+
+\usepackage[logo=sklogo]{beamerskoltech} 
+
+%%% Images
+\usepackage{graphicx}               % inserting images
+\graphicspath{{images/}}            % image folder
+\usepackage{wrapfig}                % wrapping figures
+
+%%% Tables
+\usepackage{array,tabularx,tabulary,booktabs} % Additional functionality for tables
+\usepackage{longtable}  % Long tables
+\usepackage{multirow}   % Concatenation of rows
+
+%%% Programming
+\usepackage{etoolbox} % logical operators
+
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This is LaTeX example with a suggested structure. You can creatively rework the template while keeping the main sections.
+
+\title{<MSc Thesis Title>} 
+%\subtitle{Subtitle (if needed)}
+% Your MSc Thesis title, exactly as it is was uploaded to Canvas. Feel free to capitalize each word except conjunctions and prepositions.
+
+\author[<Name Surname>]{<Name Surname>\\[1ex]{\small Research advisor<s>: <advisor>, <co-advisor if any>}}
+% Your full student name
+
+\institute{<MSc program>} 
+% Official name of your MSc program, as defined here, e.g., MSc Data Science: https://www.skoltech.ru/en/education/msc-programs/msc-programs/
+
+\date{\today}
+\frame{\titlepage}
+
+% Remember about the timing:
+% 10 min to present at Thesis Status Reviews
+% 10 min to present at MSc pre-defenses
+% 15 min to present at MSc defenses
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% In the series of slides ‘General Problem/Introduction/Background’ you are supposed to express motivation of the project (this criterion is going to be evaluated by the Reviewers). The words separated by slash in the title of this slide template are suggestions. No need to keep all of them in the title for the real slides!
+
+\begin{frame}
+    \frametitle{General problem / Introduction / Background}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+ 
+    \begin{itemize}
+        \item Identifying the area of the research.
+        \newline
+        \item Identifying gaps in the current knowledge, technological and scientific barriers.
+        \newline
+        \item Specifying the area of the research in light of the project.
+    \end{itemize}
+
+\end{frame}
+
+% Phrases you may find useful:
+%   "The area of my research covers ... "
+%   "Today ... has been already studied in the field."
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% On the slide ‘Aim’ you are supposed to express the potential impact of the project (this criterion is going to be evaluated by the external Reviewers). 
+
+\begin{frame}
+    \frametitle{Aim}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    The overall purpose of the study. It is what you hope to achieve in the project - it should be clearly and concisely defined.
+\end{frame}
+
+% Phrase you may find useful:
+%   "The overall purpose of the work is to ..."
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% On the slide ‘Objectives’ you are supposed to present novelty of the project in a concise form (this criterion is going to be evaluated by the external Reviewers). The topic of the novelty should be presented in greater detail on the slide ‘Algorithms and Methods’.
+
+\begin{frame}
+    \frametitle{Objectives}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+
+    Objectives are the specific or concrete goals to be achieved. They are steps or tasks that needed to be taken to reach the final aim of the project.
+
+    \begin{enumerate}
+        \item Objective 1
+        \item Objective 2
+        \item Objective ..
+    \end{enumerate}    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{Theory and/or Algorithms}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    Enumerating and describing the theoretical approaches, methods and algorithms used in the research.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{Methodology / Experimental setup}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    \begin{itemize}
+        \item Enumerating languages and programs used in the research.
+        \newline
+        \item Describing in detail data sets you used.
+        \newline
+        \item Presenting the metrics used.
+    \end{itemize}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This slide should contain Primary and processed results of research in the form of graphs, tables, pictures, and charts. If you introduce a chart or graph you should explain what it shows. The slide should include the graph/chart, a small bit of text is also allowed. In addition, your explanations accompanying the graph should be presented orally.
+
+\begin{frame}
+    \frametitle{Results of the Experiment}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    \begin{itemize}
+        \item Presenting the results achieved in the experiment.
+        \newline
+        \item Comparing the results of the experiment with those obtained using other methods.
+        \newline
+        \item Outlining the benefits of the used method.
+    \end{itemize}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% FOCUS ON YOUR PERSONAL CONTRIBUTIONS
+
+\begin{frame}
+    \frametitle{Discussion of results}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    \begin{itemize}
+        \item Comparative critical analysis: what you have deduced from the findings and how these results relate to previous research or other studies.
+        \newline
+        \item Research limitations.
+    \end{itemize}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% On this slide, you are supposed to highlight how your research project results stand out from similar studies. It can range from the demonstration of a well-established phenomenon in a new system to testing a hypothesis with no precedent in the literature.
+
+\begin{frame}
+    \frametitle{Scientific novelty}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    
+    State-of-the-art component of your research project.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If you feel that a certain section is not relevant in your case (for instance, Innovation / Scientific novelty / Outcomes), please, skip it rather than duplicate the info from other slides.
+
+\begin{frame}
+    \frametitle{Innovation / Practical applications}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    
+    Innovation component of your research project (if any), i.e.:
+        \begin{itemize}
+            \item Start-up potential 
+            \item Industrial application of research results
+        \end{itemize}
+
+\end{frame} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% On the slides ‘Conclusions’ you are supposed to express the significance of the achieved results (this criterion is going to be evaluated by the Reviewers).
+
+
+\begin{frame}
+    \frametitle{Conclusions}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    \begin{itemize}
+        \item Summary of the main results of the work that is consistent with the Aim and Objectives
+        \item Overall position on the global research landscape.
+        \newline
+    \end{itemize}  
+    
+    \begin{enumerate}
+        \item Conclusion A
+        \item Conclusion B
+        \item Conclusion ..
+    \end{enumerate}
+\end{frame}
+
+% Phrases you may find useful:
+%   "All these results suggest that ..."
+%   "We can conclude that ... "
+%   "Taken together, these results point to three conclusions ..."
+%   "To sum up, ... "
+%   "Although it is still too early to draw a definite conclusion, it can be stated that ... "
+%   "Although the obtained data are limited, we may conclude that ... "
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{Outcomes}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    \begin{itemize}
+        \item Papers
+        \item Talks
+        \item Conferences
+        \item Licenses/patents
+        \item Startups, etc.
+    \end{itemize}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{Outlook}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    What are the future prospects for the project? What results you are planning to achieve in the future.
+    \begin{enumerate}
+        \item ...
+        \item ...
+        \item ...
+    \end{enumerate}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+
+    \frametitle{References}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{Appendix A}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{(example) What are Prime Numbers?}
+    \skfootnote{\phantom{}\insertshortauthor. \inserttitle}
+    
+    \begin{definition}
+        A \alert{prime number} is a number that has exactly two divisors.
+    \end{definition}
+
+    \begin{example}
+        \begin{itemize}
+            \item 2 is \textbf{prime} (two divisors: 1 and 2).
+            \item 3 is prime (two divisors: 1 and 3).
+            \item 4 is not prime (\alert{three} divisors: 1, 2, and 4).
+        \end{itemize}
+    \end{example}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
